@@ -31,7 +31,8 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         SignUp,
         SignIn,
-        googleSignIn
+        googleSignIn,
+        updateUserProfile
     }
 
     return (
