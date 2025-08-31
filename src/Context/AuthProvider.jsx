@@ -32,7 +32,10 @@ const AuthProvider = ({ children }) => {
         SignUp,
         SignIn,
         googleSignIn,
-        updateUserProfile
+        updateUserProfile,
+        user,
+        setUser,
+        loading
     }
 
     return (

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { use } from 'react';
 import Input from '../Components/Input/Input';
 import Button from '../Components/Button/Button';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
+import { AuthContext } from '../Context/AuthProvider';
+import GoogleSign from './GoogleSign';
 
 const SignUp = () => {
+    const { SignUp } = use(AuthContext);
+    const navigate = useNavigate();
 
     const handleRegisterForm = (e) => {
         e.preventDefault()
@@ -14,7 +18,17 @@ const SignUp = () => {
         const phone = form.phone.value;
         const currentClass = form.class.value;
         console.table(email, password, name, phone, currentClass)
+
+        SignUp(email, password)
+            .then(result => {
+                console.log(result.user);
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
+
     return (
         <div className='mt-20 container mx-auto'>
             <div className="max-w-lg mx-auto shadow-2xl rounded-md p-16">
@@ -28,8 +42,11 @@ const SignUp = () => {
                         <Input type='text' name='class' placeholder='' label='Class name' />
                     </div>
                     <Button label='Register' size='full' />
+
+                    {/* googleRegister  */}
+                    <GoogleSign />
                 </form>
-                <p className='py-2 pl-1 text-gray-500'>Already have an account?
+                <p className='text-center text-gray-500'>Already have an account?
                     <Link
                         to='/sign-in'
                         className='text-blue-500 underline pl-1'>Sign in
