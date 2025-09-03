@@ -4,10 +4,12 @@ import Button from '../Components/Button/Button';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthProvider';
 import GoogleSign from './GoogleSign';
+import UseAxiosSecure from '../hook/UseAxiosSecure';
 
 const SignUp = () => {
-    const { SignUp } = use(AuthContext);
+    const { SignUp, user } = use(AuthContext);
     const navigate = useNavigate();
+    const axoiosSecure = UseAxiosSecure();
 
     const handleRegisterForm = (e) => {
         e.preventDefault()
@@ -22,7 +24,18 @@ const SignUp = () => {
         SignUp(email, password)
             .then(result => {
                 console.log(result.user);
-                navigate('/')
+                // navigate('/')
+
+                // post userinfo in database
+                const userInfo = {
+                    user: user?.displayName || 'N/A',
+                    userGmail: user?.email,
+                    role: 'Student',
+                    create_at: new Date().toISOString(),
+                    last_login: new Date().toISOString()
+                }
+                const userPostedData = axoiosSecure.post('/users', userInfo);
+                console.log(userPostedData?.data);
             })
             .catch(error => {
                 console.log(error);

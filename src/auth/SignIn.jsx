@@ -7,7 +7,7 @@ import GoogleSign from './GoogleSign';
 
 const SignIn = () => {
     const { SignIn } = use(AuthContext);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleSignIn = (e) => {
         e.preventDefault()
@@ -20,7 +20,7 @@ const SignIn = () => {
         SignIn(email, password)
             .then(result => {
                 console.log(result);
-                navigate('/')
+                navigate('/');
             })
             .catch(error => {
                 console.log(error);
