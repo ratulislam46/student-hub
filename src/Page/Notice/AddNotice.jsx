@@ -40,7 +40,7 @@ const AddNotice = () => {
         <div className=' container mx-auto'>
             <div className="max-w-lg mx-auto shadow-2xl rounded-md p-16">
                 <h2 className='text-center font-semibold text-4xl pb-6'>Notice</h2>
-                <form onSubmit={handleAddNotice}>
+                <form onSubmit={handleAddNotice} className='space-y-2'>
                     {/* Notice Title  */}
                     <label className="mb-2 text-sm font-medium">Notice Title</label>
                     <input type="text" name='title' className="bg-gray-50 border border-gray-300 text-sm rounded-lg w-full p-3" placeholder="Notice Title" required />
