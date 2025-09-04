@@ -4,10 +4,12 @@ import Button from '../Components/Button/Button';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthProvider';
 import GoogleSign from './GoogleSign';
+import UseAxiosSecure from '../hook/UseAxiosSecure';
 
 const SignIn = () => {
-    const { SignIn } = use(AuthContext);
+    const { SignIn, user } = use(AuthContext);
     const navigate = useNavigate();
+    const axoiosSecure = UseAxiosSecure()
 
     const handleSignIn = (e) => {
         e.preventDefault()
@@ -20,6 +22,11 @@ const SignIn = () => {
         SignIn(email, password)
             .then(result => {
                 console.log(result);
+
+                // update user login data 
+                const updateUserData = axoiosSecure.patch(`/users-last-login/${user?.email}`);
+                console.log(updateUserData);
+
                 navigate('/');
             })
             .catch(error => {

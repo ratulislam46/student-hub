@@ -45,6 +45,14 @@ const Navbar = () => {
                 Notice
             </Link>
         </li>
+        <li>
+            <Link
+                to="/add-notice"
+                className="nav-link"
+            >
+                Add Notice
+            </Link>
+        </li>
     </>
 
     return (

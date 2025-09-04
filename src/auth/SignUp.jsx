@@ -24,18 +24,20 @@ const SignUp = () => {
         SignUp(email, password)
             .then(result => {
                 console.log(result.user);
-                // navigate('/')
 
                 // post userinfo in database
                 const userInfo = {
                     user: user?.displayName || 'N/A',
-                    userGmail: user?.email,
+                    email: user?.email,
                     role: 'Student',
                     create_at: new Date().toISOString(),
                     last_login: new Date().toISOString()
                 }
                 const userPostedData = axoiosSecure.post('/users', userInfo);
-                console.log(userPostedData?.data);
+                console.log(userPostedData);
+
+                // navigate homw page 
+                navigate('/')
             })
             .catch(error => {
                 console.log(error);

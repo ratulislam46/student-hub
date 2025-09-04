@@ -7,6 +7,7 @@ import Profile from "../Page/Profile/Profile";
 import Notice from "../Page/Notice/Notice";
 import SignIn from "../auth/SignIn";
 import SignUp from "../auth/SignUp";
+import AddNotice from "../Page/Notice/AddNotice";
 
 
 export const router = createBrowserRouter([
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
                 path: '/notice',
                 Component: Notice
             },
+            {
+                path:'/add-notice',
+                Component: AddNotice
+            }
         ]
     },
     {

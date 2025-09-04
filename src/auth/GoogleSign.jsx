@@ -1,15 +1,29 @@
 import React, { use } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
 import { useNavigate } from 'react-router';
+import UseAxiosSecure from '../hook/UseAxiosSecure';
 
 const GoogleSign = () => {
-    const { googleSignIn } = use(AuthContext);
+    const { googleSignIn, user } = use(AuthContext);
     const navigate = useNavigate();
+    const axoiosSecure = UseAxiosSecure();
 
     const handleGoogleSign = () => {
         googleSignIn()
             .then(result => {
-                console.log(result);
+                console.log(result?.user);
+
+                // post userinfo in database
+                const userInfo = {
+                    user: user?.displayName || 'N/A',
+                    email: user?.email,
+                    role: 'Student',
+                    create_at: new Date().toISOString(),
+                    last_login: new Date().toISOString()
+                }
+                const userPostedData = axoiosSecure.post('/users', userInfo);
+                console.log(userPostedData);
+
                 navigate('/')
             })
             .catch(error => {

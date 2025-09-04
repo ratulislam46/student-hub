@@ -10,7 +10,7 @@ const useAxiosInstance = () => {
       return config;
     },
     function (error) {
-      return Promise.reject(error); // <-- fixed
+      return Promise.reject(error); 
     }
   );
 
