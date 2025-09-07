@@ -1,11 +1,13 @@
 .nav-link {
-    font-size: medium;
-    color: #374151;
-    letter-spacing: 0.05em;
-    transition-property: color;
-    transition-duration: 200ms;
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .nav-link:hover {
-    color: #5b21b6;
+    background-color: rgba(253, 252, 252, 0.13);
 }
