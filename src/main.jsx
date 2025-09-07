@@ -6,6 +6,8 @@ import { RouterProvider } from 'react-router'
 import { router } from './Routes/AppRoutes'
 import AuthProvider from './Context/AuthProvider'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import 'flowbite';
+
 
 const queryClient = new QueryClient()
 

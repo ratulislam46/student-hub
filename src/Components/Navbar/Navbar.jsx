@@ -9,36 +9,36 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className='hidden lg:block'>
-                <div id="drawer-navigation" className="p-4 overflow-y-auto bg-gray-800" aria-labelledby="drawer-navigation-label">
-                    <h5 className="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Menu</h5>
+            <div className='hidden lg:block border min-h-screen bg-gray-800'>
+                <div className="p-6 overflow-y-auto">
+                    <h5 className="text-base font-semibold text-gray-500 uppercase">Menu</h5>
 
                     <div className="py-4 overflow-y-auto">
                         <ul className="space-y-2 font-medium">
                             {/* Home  */}
                             <li className='nav-link'>
-                                <FaHome size={20} />
+                                <FaHome size={24} />
                                 <Link to="/">
                                     Home
                                 </Link>
                             </li>
                             {/* Quiz  */}
                             <li className='nav-link'>
-                                <MdQuiz  size={20}/>
+                                <MdQuiz  size={24}/>
                                 <Link to="/quiz">
                                     Quiz
                                 </Link>
                             </li>
                             {/* Forum  */}
                             <li className='nav-link'>
-                                <MdForum  size={20}/>
+                                <MdForum  size={24}/>
                                 <Link to="/forum">
                                     Forum
                                 </Link>
                             </li>
                             {/* Profile  */}
                             <li className='nav-link'>
-                                <FaUserCircle size={20}/>
+                                <FaUserCircle size={24}/>
                                 <Link
                                     to="/profile"
                                 >
@@ -47,28 +47,28 @@ const Navbar = () => {
                             </li>
                             {/* Notice  */}
                             <li className='nav-link'>
-                                <FaNewspaper size={20} />
+                                <FaNewspaper size={24} />
                                 <Link to="/notice">
                                     Notice
                                 </Link>
                             </li>
                             {/* Add Notice */}
                             <li className='nav-link'>
-                                <FaPlus size={20} />
+                                <FaPlus size={24} />
                                 <Link to="/add-notice">
                                     Add Notice
                                 </Link>
                             </li>
                             {/* Sign in */}
                             <li className='nav-link'>
-                                <MdLogin size={20} />
+                                <MdLogin size={24} />
                                 <Link to="/sign-in">
                                     Sign in
                                 </Link>
                             </li>
                             {/* Sign up */}
                             <li className='nav-link'>
-                                <VscSaveAs size={20} />
+                                <VscSaveAs size={24} />
                                 <Link to="/sign-up">
                                     Sign up
                                 </Link>
