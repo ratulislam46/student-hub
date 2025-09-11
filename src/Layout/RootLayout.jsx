@@ -4,7 +4,7 @@ import { Outlet } from 'react-router';
 
 const RootLayout = () => {
     return (
-        <div className='flex min-h-screen container mx-auto'>
+        <div className='flex min-h-screen container mx-auto gap-3'>
             <div className='w-fit'>
                 <Navbar/>
             </div>
