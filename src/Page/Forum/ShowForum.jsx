@@ -25,9 +25,9 @@ const ShowForum = () => {
                 {
                     allForm?.map(signleForumm =>
                         <div key={signleForumm._id}
-                            className='py-8 px-6 border border-gray-300 hover:border-green-300 rounded-md shadow-md lg:flex justify-between items-center'
+                            className='py-8 px-6 bg-gradient-to-r from-green-300 to-green-200 hover:from-green-300 hover:to-green-400 rounded-md shadow-md lg:flex justify-between items-center'
                         >
-                            <h3 className='font-semibold text-xl text-red-500'>{signleForumm?.message}</h3>
+                            <h3 className='font-semibold text-xl'>{signleForumm?.message}</h3>
 
                             {/* Comment  */}
                             <Comment />

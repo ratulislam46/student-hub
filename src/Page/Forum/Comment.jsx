@@ -13,7 +13,7 @@ const Comment = () => {
         <div>
             <form
                 onSubmit={handleComment}
-                className='flex gap-1 items-center'>
+                className='flex gap-3 items-center'>
                 <Input placeholder="Your opinion.." type="text" name="comment"/>
                 <Button label="Post" size="w-sm" />
             </form>
