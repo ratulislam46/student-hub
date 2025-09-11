@@ -24,23 +24,18 @@ const Forum = () => {
     }
 
     return (
-        <div>
+        <div className='mx-1 md:mx-0'>
             <form onSubmit={handleAddForum}>
-                <label>Share Your Questions</label>
-                <div className="flex items-center px-1 md:px-3 py-4 rounded-lg bg-gray-200">
-
+                <div className="flex items-center px-1 md:px-3 py-10 rounded-lg bg-gray-200 my-6">
                     <textarea rows="3"
                         name='message'
                         className=" mx-4 p-2.5 w-full text-sm bg-white rounded-lg"
-                         placeholder="Your message..." required></textarea>
-
+                        placeholder="Your message..." required></textarea>
                     <Button label="Post" size="w-full" />
-
                 </div>
             </form>
-
             <div>
-                <ShowForum/>
+                <ShowForum />
             </div>
         </div>
     );
