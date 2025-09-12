@@ -1,8 +1,10 @@
 import { Link } from 'react-router';
 import SmalDeviceNavbar from './SmalDeviceNavbar';
 import { FaHome, FaUserCircle, FaNewspaper, FaPlus } from "react-icons/fa";
-import { MdQuiz, MdForum,MdLogin  } from "react-icons/md";
+import { MdQuiz, MdForum, MdLogin } from "react-icons/md";
 import { VscSaveAs } from "react-icons/vsc";
+import { AiFillAppstore } from "react-icons/ai";
+
 
 
 const Navbar = () => {
@@ -24,21 +26,21 @@ const Navbar = () => {
                             </li>
                             {/* Quiz  */}
                             <li className='nav-link'>
-                                <MdQuiz  size={24}/>
+                                <MdQuiz size={24} />
                                 <Link to="/quiz">
                                     Quiz
                                 </Link>
                             </li>
                             {/* Forum  */}
                             <li className='nav-link'>
-                                <MdForum  size={24}/>
+                                <MdForum size={24} />
                                 <Link to="/forum">
                                     Forum
                                 </Link>
                             </li>
                             {/* Profile  */}
                             <li className='nav-link'>
-                                <FaUserCircle size={24}/>
+                                <FaUserCircle size={24} />
                                 <Link
                                     to="/profile"
                                 >
@@ -57,6 +59,13 @@ const Navbar = () => {
                                 <FaPlus size={24} />
                                 <Link to="/add-notice">
                                     Add Notice
+                                </Link>
+                            </li>
+                            {/* Routine */}
+                            <li className='nav-link'>
+                                <AiFillAppstore size={24} />
+                                <Link to="/routine">
+                                    Routine
                                 </Link>
                             </li>
                             {/* Sign in */}

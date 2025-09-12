@@ -8,6 +8,8 @@ import Notice from "../Page/Notice/Notice";
 import SignIn from "../auth/SignIn";
 import SignUp from "../auth/SignUp";
 import AddNotice from "../Page/Notice/AddNotice";
+import Routine from "../Page/Routine/Routine";
+import SignleForum from "../Page/Forum/SignleForum";
 
 
 export const router = createBrowserRouter([
@@ -28,6 +30,10 @@ export const router = createBrowserRouter([
                 Component: Forum
             },
             {
+                path: '/single-forum/:id',
+                Component: SignleForum
+            },
+            {
                 path: '/profile',
                 Component: Profile
             },
@@ -36,8 +42,12 @@ export const router = createBrowserRouter([
                 Component: Notice
             },
             {
-                path:'/add-notice',
+                path: '/add-notice',
                 Component: AddNotice
+            },
+            {
+                path: '/routine',
+                Component: Routine
             }
         ]
     },
