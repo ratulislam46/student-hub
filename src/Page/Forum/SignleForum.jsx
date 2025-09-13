@@ -26,8 +26,7 @@ const SignleForum = () => {
             return res.data;
         }
     })
-    console.log(ForumComment);
-    // console.log(SignleForumInfo);
+    
     if (isLoading) return <Loader />
 
     return (
