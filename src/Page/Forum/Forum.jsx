@@ -34,6 +34,11 @@ const Forum = () => {
                     <Button label="Post" size="w-full" />
                 </div>
             </form>
+            {/* title and short description  */}
+            <div className='pt-12 pb-6'>
+                <h2 className='text-2xl md:text-3xl xl:text-4xl font-bold'>Some question here</h2>
+                <p className='text-gray-500'>Anyone can share your own opinion and also try provide best answer for any question.</p>
+            </div>
             <div>
                 <ShowForum />
             </div>
