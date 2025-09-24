@@ -20,7 +20,6 @@ const Quiz = () => {
     // console.log(allQuesAndAns);
     return (
         <div>
-            <h1>Quiz</h1>
             <QuizList allQuesAndAns={allQuesAndAns}></QuizList>
         </div>
     );
