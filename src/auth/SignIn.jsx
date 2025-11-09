@@ -36,7 +36,10 @@ const SignIn = () => {
     return (
         <div className='mt-20 container mx-auto'>
             <div className="max-w-lg mx-auto shadow-2xl rounded-md p-16">
-                <h2 className='text-center font-semibold text-4xl pb-6'>Sign in</h2>
+                <div className='text-center space-y-3 mb-10'>
+                    <h2 className='text-4xl'>Welcome Back</h2>
+                    <p className='text-sm'>Sign in to access your account</p>
+                </div>
                 <form onSubmit={handleSignIn}>
                     <Input type='email' name='email' placeholder='' label='Email address' />
                     <Input type='password' name='password' placeholder='' label='Password' />

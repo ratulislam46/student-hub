@@ -15,7 +15,8 @@ const Notice = () => {
             return res.data;
         }
     })
-    console.log(allNotice);
+    // console.log(allNotice);
+    if(isLoading) return <p className='min-h-screen flex justify-center items-center'>Loading . . .</p>
 
     return (
         <div>

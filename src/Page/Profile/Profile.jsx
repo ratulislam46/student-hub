@@ -140,14 +140,14 @@ const Profile = () => {
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="mt-8 flex flex-wrap gap-4 justify-center">
+                        {/* <div className="mt-8 flex flex-wrap gap-4 justify-center">
                             <button className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors shadow-md">
                                 Edit Profile
                             </button>
                             <button className="px-6 py-2 bg-secondary text-white rounded-lg hover:bg-secondary/90 transition-colors shadow-md">
                                 Change Password
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

@@ -37,7 +37,7 @@ const AddNotice = () => {
     }
 
     return (
-        <div className=' container mx-auto'>
+        <div>
             <div className="max-w-lg mx-auto shadow-2xl rounded-md p-16">
                 <h2 className='text-center font-semibold text-4xl pb-6'>Notice</h2>
                 <form onSubmit={handleAddNotice} className='space-y-2'>
