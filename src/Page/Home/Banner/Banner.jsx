@@ -59,20 +59,23 @@ const Banner = () => {
                     {/* Image/Illustration */}
                     <div className="relative">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                            <div className="bg-gradient-to-br from-primary to-secondary aspect-video rounded-2xl flex items-center justify-center">
-                                <div className="text-center p-8">
-                                    <div className="text-5xl mb-4">📚</div>
-                                    <h3 className="text-2xl font-bold text-white">Student Hub Platform</h3>
-                                    <p className="text-white/90 mt-2">Learn • Share • Collaborate</p>
-                                </div>
-                            </div>
+                            {/* Using an actual image instead of colored background */}
+                            <img 
+                                src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                alt="Student Learning Platform" 
+                                className="w-full h-auto object-cover aspect-video"
+                            />
                         </div>
                         
-                        {/* Floating cards */}
+                        {/* Floating cards with images */}
                         <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100 w-48">
                             <div className="flex items-center">
                                 <div className="bg-green-100 p-2 rounded-lg mr-3">
-                                    <span className="text-green-600">📝</span>
+                                    <img 
+                                        src="https://cdn-icons-png.flaticon.com/512/2920/2920310.png" 
+                                        alt="Assignments" 
+                                        className="w-6 h-6 object-contain"
+                                    />
                                 </div>
                                 <div>
                                     <p className="font-semibold text-gray-900">Assignments</p>
@@ -84,7 +87,11 @@ const Banner = () => {
                         <div className="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100 w-48">
                             <div className="flex items-center">
                                 <div className="bg-blue-100 p-2 rounded-lg mr-3">
-                                    <span className="text-blue-600">💬</span>
+                                    <img 
+                                        src="https://cdn-icons-png.flaticon.com/512/733/733591.png" 
+                                        alt="Discussion" 
+                                        className="w-6 h-6 object-contain"
+                                    />
                                 </div>
                                 <div>
                                     <p className="font-semibold text-gray-900">Discussion</p>
